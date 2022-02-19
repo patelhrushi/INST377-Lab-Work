@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (current.some((index) => squares[currentPosition + index + width].classList.contains('taken'))) {
       current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
       random = nextRandom;
-      neaxtRandom = Math.floor(Math.random() * theTetrominoes.length);
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length);
       current = theTetrominoes[random][currentRotation];
       currentPosition = 4;
       draw();
