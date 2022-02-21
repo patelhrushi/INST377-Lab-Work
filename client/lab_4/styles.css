@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .menu-container {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+    display: flex;
+    justify-content : center;
+    
+  }
+  
+  .menu {
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title2{
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(0,139, 139,0.8);
+    padding: 10px 15px;
+    margin: 0;
+  }
+
+  .links {
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .main_page {
+    margin-left: 20px;
+  }
+
+  .header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .photo-grid-container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo-grid-container .carousel_item,
+  .photo-grid-container .carousel_item--hidden{
+      display: none;
+  }
+
+  .photo-grid-container .carousel_item img{
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+  }
+
+  .photo-grid-container .carousel_item--visible {
+      display: block;
+  }
+
+  .photo-grid-container .carousel_actions {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .social, .project {
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+  }
+
+  .footer-two {
+      flex: 4;
+  }
+  
+  .footer-one, .footer-three {
+      background-color: #5995DA;
+  }
+
+  .links a:link{
+    color: rgb(255,255,255);
+    text-decoration: none;
+  }
+
+  .links a:visited{
+    color: rgb(255,255,255);
+    text-decoration: none;
+  }
+
+
+  
