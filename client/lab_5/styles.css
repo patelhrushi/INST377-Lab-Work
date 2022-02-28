@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: rgb(45, 83, 83);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
     ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-  background-color: darkslategray;
+  background-color: rgb(45, 83, 83);
+  height: 100%;
 }
 
 /* Page Layout */
@@ -24,4 +29,8 @@ body {
 .container {
   max-width: 960px;
   margin-top: 25px;
+}
+
+.box {
+  background-color: lightseagreen;
 }
