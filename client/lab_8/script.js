@@ -88,7 +88,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       console.log(event.target.value);
       if (storedDataArray.length < 1) { return; }
 
-      const selectResto = storedDataArray.filter((item) => {
+      const selectResto = currentArray.filter((item) => {
         const lowerName = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
         return lowerName.includes(lowerValue);
@@ -101,7 +101,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       console.log(eventZip.target.value);
       if (storedData.length < 1) { return; }
 
-      const selectZip = storedDataArray.filter((item) => item.zip.includes(eventZip.target.value));
+      const selectZip = currentArray.filter((item) => item.zip.includes(eventZip.target.value));
       console.log(selectZip);
       createHtmlList(selectZip);
     });
