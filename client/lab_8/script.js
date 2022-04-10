@@ -21,7 +21,7 @@ function restoArrayMake(array) {
 function createHtmlList(collection) {
   console.log('fired HTML creator');
   console.log(collection);
-  const targetList = document.querySelector('.resto-list');
+  const targetList = document.querySelector('#resto-list');
   targetList.innerHTML = '';
   collection.forEach((item) => {
     const {name} = item;
@@ -100,7 +100,7 @@ async function mainEvent() { // the async keyword means we can make API requests
 
     zipcode.addEventListener('input', async (eventZip) => {
       console.log(eventZip.target.value);
-      if (storedData.length < 1) { return; }
+      if (storedDataArray.length < 1) { return; }
 
       const selectZip = currentArray.filter((item) => item.zip.includes(eventZip.target.value));
       console.log(selectZip);
