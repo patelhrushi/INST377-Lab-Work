@@ -68,7 +68,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const retrievalVar = 'res=taurants';
   submit.style.display = 'none';
 
-  if (localStorage.getItem(retrievalVar) === undefined) {
+  if (!localStorage.getItem(retrievalVar)) {
     const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
     const arrayFromJson = await results.json(); // This changes it into data we can use - an object
     console.log(arrayFromJson);
@@ -86,7 +86,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     let currentArray = [];
     resto.addEventListener('input', async (event) => {
       console.log(event.target.value);
-      if (currentArray.length < 1) { return; }
+      if (storedDataArray.length < 1) { return; }
 
       const selectResto = storedDataArray.filter((item) => {
         const lowerName = item.name.toLowerCase();
@@ -99,9 +99,9 @@ async function mainEvent() { // the async keyword means we can make API requests
 
     zipcode.addEventListener('input', async (eventZip) => {
       console.log(eventZip.target.value);
-      if (currentArray.length < 1) { return; }
+      if (storedData.length < 1) { return; }
 
-      const selectZip = currentArray.filter((item) => item.zip.includes(eventZip.target.value));
+      const selectZip = storedDataArray.filter((item) => item.zip.includes(eventZip.target.value));
       console.log(selectZip);
       createHtmlList(selectZip);
     });
